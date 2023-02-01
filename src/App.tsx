@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Body, Container, Box, colors, FormGroup } from "./styles";
+import { Body, Container, Box, colors, FormGroup, Button } from "./styles";
 
 function App() {
   return (
@@ -48,6 +48,7 @@ function App() {
                   <img src="../images/icon-error.svg" alt="" width={20} />
                   <small>Password is required</small>
                 </FormGroup>
+                <Button>CLAIM YOUR FREE TRIAL</Button>
               </form>
             </Box>
           </div>

@@ -11,6 +11,7 @@ interface StyledDivProps {
 export const colors = {
     red: 'hsl(0, 100%, 74%)', 
     green: 'hsl(154, 59%, 51%)',
+    darkGreen: 'hsl(154, 59%, 35%)',
     blue: 'hsl(248, 32%, 49%)',
     darkBlue: 'hsl(249, 10%, 26%)' ,
     grayishBlue: 'hsl(246, 25%, 77%)',
@@ -97,5 +98,20 @@ export const FormGroup = styled.div<InputProps>`
     }
 
 `;
+
+export const Button = styled.button`
+    background-color: ${colors.green};
+    border: 1px solid ${colors.darkGreen};
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    padding: 15px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 1px;
+    width: 100%;
+    box-shadow: 0 2px ${colors.darkGreen};
+    
+    `;
 
     
