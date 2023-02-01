@@ -15,3 +15,23 @@ export const Body = styled.div`
     width: 100vw;
     `;
 
+export const Container = styled.div`
+margin: 0 auto;
+max-width: 1440px;
+display: flex;
+min-height: 100vh;
+align-items: center;
+justify-content: center;
+
+> div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 2rem;
+    background-color: aliceblue;
+    margin: 0 20px;
+}
+`;
