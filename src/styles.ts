@@ -13,6 +13,9 @@ export const Body = styled.div`
     background-image: url('../images/bg-intro-desktop.png');
     height: 100vh;
     width: 100vw;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+
     `;
 
 export const Container = styled.div`
@@ -29,9 +32,18 @@ justify-content: center;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    text-align: left;
     padding: 0 2rem;
-    background-color: aliceblue;
     margin: 0 20px;
+    gap: 1.5rem;
+
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        align-self: flex-start; 
+    }
+    
 }
 `;
+
+    
