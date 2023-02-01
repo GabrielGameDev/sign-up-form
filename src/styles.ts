@@ -4,6 +4,10 @@ interface StyledDivProps {
     padding: string;
   }
 
+  interface InputProps{
+    error: boolean;
+  }
+
 export const colors = {
     red: 'hsl(0, 100%, 74%)', 
     green: 'hsl(154, 59%, 51%)',
@@ -63,7 +67,7 @@ export const Box = styled.div<StyledDivProps>`
 
     `;
 
-export const FormGroup = styled.div`
+export const FormGroup = styled.div<InputProps>`
     position: relative;
     margin-bottom: 2rem;
     
@@ -71,7 +75,25 @@ export const FormGroup = styled.div`
         width: 100%;
         border-radius: 5px;
         padding: 15px 25px;
-        border: 1.3px solid ${colors.grayishBlue};
+        border: 1.3px solid ${props => props.error ? colors.red : colors.grayishBlue};
+        color: ${props => props.error ? colors.red : "#000"};
+        font-weight: 600;
+    }
+
+    img{
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translateY(-50%);
+    }
+
+    small{
+        position: absolute;
+        bottom: -1.5rem;
+        right: 0;
+        color: ${colors.red};
+        font-size: 0.7rem;
+        font-weight: 600;
     }
 
 `;

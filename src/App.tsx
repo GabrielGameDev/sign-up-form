@@ -28,17 +28,25 @@ function App() {
 
             <Box color="#fff" padding="35px">
               <form>
-                <FormGroup>
+                <FormGroup error={true}>
                   <input type="text" placeholder="First Name" />
+                  <img src="../images/icon-error.svg" alt="" width={20} />
+                  <small>First name is required</small>
                 </FormGroup>
-                <FormGroup>
+                <FormGroup error={true}>
                   <input type="text" placeholder="Last Name" />
+                  <img src="../images/icon-error.svg" alt="" width={20} />
+                  <small>Last name is required</small>
                 </FormGroup>
-                <FormGroup>
+                <FormGroup error={true}>
                   <input type="email" placeholder="E-mail adress" />
+                  <img src="../images/icon-error.svg" alt="" width={20} />
+                  <small>E-mail adress is required</small>
                 </FormGroup>
-                <FormGroup>
+                <FormGroup error={true}>
                   <input type="password" placeholder="Password" />
+                  <img src="../images/icon-error.svg" alt="" width={20} />
+                  <small>Password is required</small>
                 </FormGroup>
               </form>
             </Box>
