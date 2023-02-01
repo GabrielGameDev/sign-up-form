@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const colors = {
+export const colors = {
     red: 'hsl(0, 100%, 74%)', 
     green: 'hsl(154, 59%, 51%)',
     blue: 'hsl(248, 32%, 49%)',
@@ -44,6 +44,30 @@ justify-content: center;
     }
     
 }
+`;
+
+export const Box = styled.div`
+    background-color: ${props => props.color};
+    border-radius: 5px;
+    box-shadow: 0 10px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+
+    span{
+        font-weight: 600;
+    }
+
+    `;
+
+export const FormGroup = styled.div`
+    position: relative;
+    margin-bottom: 1.5rem;
+    
+    input{
+        width: 100%;
+    }
+
 `;
 
     

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Body, Container } from "./styles";
+import { Body, Container, Box, colors, FormGroup } from "./styles";
 
 function App() {
   return (
@@ -20,7 +20,19 @@ function App() {
             </p>
           </div>
           <div>
-            <h1>Learn to code by watching others</h1>
+            <Box color={colors.blue}>
+              <p>
+                <span>Try it free 7 days</span> then $20/mo. thereafter
+              </p>
+            </Box>
+
+            <Box color="#fff">
+              <form>
+                <FormGroup>
+                  <input type="text" />
+                </FormGroup>
+              </form>
+            </Box>
             <p>
               See how experienced developers solve problems in real-time.
               Watching scripted tutorials is great, but understanding how
