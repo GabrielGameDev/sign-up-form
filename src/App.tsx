@@ -1,5 +1,13 @@
 import { useState } from "react";
-import { Body, Container, Box, colors, FormGroup, Button } from "./styles";
+import {
+  Body,
+  Container,
+  Box,
+  colors,
+  FormGroup,
+  Button,
+  Terms,
+} from "./styles";
 
 function App() {
   return (
@@ -50,6 +58,10 @@ function App() {
                 </FormGroup>
                 <Button>CLAIM YOUR FREE TRIAL</Button>
               </form>
+              <Terms>
+                By clicking the button, you are agreeing to our
+                <a href=""> Terms and Services</a>
+              </Terms>
             </Box>
           </div>
         </Container>

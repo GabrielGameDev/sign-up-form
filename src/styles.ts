@@ -114,4 +114,17 @@ export const Button = styled.button`
     
     `;
 
+export const Terms = styled.small`
+    display: block;
+    text-align: center;
+    color: ${colors.grayishBlue};
+    font-size: 0.7rem;
+    margin-top: 1rem;
+
+    a{
+        color: ${colors.red};
+        text-decoration: none;
+        font-weight: 600;
+    }
+`;
     
