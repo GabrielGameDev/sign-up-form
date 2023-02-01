@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface StyledDivProps {
+    padding: string;
+  }
+
 export const colors = {
     red: 'hsl(0, 100%, 74%)', 
     green: 'hsl(154, 59%, 51%)',
@@ -12,8 +16,7 @@ export const Body = styled.div`
     background-color: ${colors.red};
     background-image: url('../images/bg-intro-desktop.png');
     height: 100vh;
-    width: 100vw;
-    font-family: 'Poppins', sans-serif;
+    width: 100vw;    
     color: white;
 
     `;
@@ -46,13 +49,13 @@ justify-content: center;
 }
 `;
 
-export const Box = styled.div`
+export const Box = styled.div<StyledDivProps>`
     background-color: ${props => props.color};
     border-radius: 5px;
     box-shadow: 0 10px 0 rgba(0, 0, 0, 0.2);
     text-align: center;
     width: 100%;
-    padding: 20px;
+    padding: ${props => props.padding};
 
     span{
         font-weight: 600;
@@ -62,10 +65,13 @@ export const Box = styled.div`
 
 export const FormGroup = styled.div`
     position: relative;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     
     input{
         width: 100%;
+        border-radius: 5px;
+        padding: 15px 25px;
+        border: 1.3px solid ${colors.grayishBlue};
     }
 
 `;

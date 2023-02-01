@@ -20,27 +20,28 @@ function App() {
             </p>
           </div>
           <div>
-            <Box color={colors.blue}>
+            <Box color={colors.blue} padding="20px">
               <p>
                 <span>Try it free 7 days</span> then $20/mo. thereafter
               </p>
             </Box>
 
-            <Box color="#fff">
+            <Box color="#fff" padding="35px">
               <form>
                 <FormGroup>
-                  <input type="text" />
+                  <input type="text" placeholder="First Name" />
+                </FormGroup>
+                <FormGroup>
+                  <input type="text" placeholder="Last Name" />
+                </FormGroup>
+                <FormGroup>
+                  <input type="email" placeholder="E-mail adress" />
+                </FormGroup>
+                <FormGroup>
+                  <input type="password" placeholder="Password" />
                 </FormGroup>
               </form>
             </Box>
-            <p>
-              See how experienced developers solve problems in real-time.
-              Watching scripted tutorials is great, but understanding how
-              developers think is invaluable. Try it free 7 days then $20/mo.
-              thereafter First Name Last Name Email Address Password Claim your
-              free trial By clicking the button, you are agreeing to our Terms
-              and Services
-            </p>
           </div>
         </Container>
       </Body>
