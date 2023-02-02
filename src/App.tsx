@@ -10,6 +10,80 @@ import {
 } from "./styles";
 
 function App() {
+  interface IForm {
+    inputValue: string;
+    error: boolean;
+  }
+
+  const [firstName, setFirstName] = useState<IForm>({
+    inputValue: "",
+    error: false,
+  });
+
+  const [lastName, setLastName] = useState<IForm>({
+    inputValue: "",
+    error: false,
+  });
+
+  const [email, setEmail] = useState<IForm>({
+    inputValue: "",
+    error: false,
+  });
+
+  const [password, setPassword] = useState<IForm>({
+    inputValue: "",
+    error: false,
+  });
+
+  const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    console.log(`Nome: ${name} - Valor: ${value}`);
+
+    switch (name) {
+      case "firstName":
+        setFirstName({ inputValue: value, error: false });
+        break;
+      case "lastName":
+        setLastName({ inputValue: value, error: false });
+        break;
+      case "email":
+        setEmail({ inputValue: value, error: false });
+        break;
+      case "password":
+        setPassword({ inputValue: value, error: false });
+        break;
+      default:
+        break;
+    }
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (firstName.inputValue === "") {
+      setFirstName({ inputValue: firstName.inputValue, error: true });
+      return;
+    }
+
+    if (lastName.inputValue === "") {
+      setLastName({ inputValue: lastName.inputValue, error: true });
+      return;
+    }
+
+    if (email.inputValue === "") {
+      setEmail({ inputValue: email.inputValue, error: true });
+      return;
+    }
+
+    if (password.inputValue === "") {
+      setPassword({ inputValue: password.inputValue, error: true });
+      return;
+    }
+
+    alert("Form sent successfully!");
+    window.location.reload();
+  };
+
   return (
     <>
       <Body>
@@ -35,28 +109,48 @@ function App() {
             </Box>
 
             <Box color="#fff" padding="35px">
-              <form>
-                <FormGroup error={true}>
-                  <input type="text" placeholder="First Name" />
+              <form onSubmit={handleSubmit}>
+                <FormGroup error={firstName.error}>
+                  <input
+                    type="text"
+                    placeholder="First Name"
+                    name="firstName"
+                    onChange={handleInput}
+                  />
                   <img src="../images/icon-error.svg" alt="" width={20} />
                   <small>First name is required</small>
                 </FormGroup>
-                <FormGroup error={true}>
-                  <input type="text" placeholder="Last Name" />
+                <FormGroup error={lastName.error}>
+                  <input
+                    type="text"
+                    placeholder="Last Name"
+                    name="lastName"
+                    onChange={handleInput}
+                  />
                   <img src="../images/icon-error.svg" alt="" width={20} />
                   <small>Last name is required</small>
                 </FormGroup>
-                <FormGroup error={true}>
-                  <input type="email" placeholder="E-mail adress" />
+                <FormGroup error={email.error}>
+                  <input
+                    type="email"
+                    placeholder="E-mail adress"
+                    name="email"
+                    onChange={handleInput}
+                  />
                   <img src="../images/icon-error.svg" alt="" width={20} />
                   <small>E-mail adress is required</small>
                 </FormGroup>
-                <FormGroup error={true}>
-                  <input type="password" placeholder="Password" />
+                <FormGroup error={password.error}>
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    name="password"
+                    onChange={handleInput}
+                  />
                   <img src="../images/icon-error.svg" alt="" width={20} />
                   <small>Password is required</small>
                 </FormGroup>
-                <Button>CLAIM YOUR FREE TRIAL</Button>
+                <Button type="submit">CLAIM YOUR FREE TRIAL</Button>
               </form>
               <Terms>
                 By clicking the button, you are agreeing to our

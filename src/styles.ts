@@ -82,6 +82,7 @@ export const FormGroup = styled.div<InputProps>`
     }
 
     img{
+        opacity: ${props => props.error ? 1 : 0};
         position: absolute;
         top: 50%;
         right: 5%;
@@ -89,6 +90,7 @@ export const FormGroup = styled.div<InputProps>`
     }
 
     small{
+        opacity: ${props => props.error ? 1 : 0};
         position: absolute;
         bottom: -1.5rem;
         right: 0;
