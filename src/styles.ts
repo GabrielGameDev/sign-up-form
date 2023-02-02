@@ -19,7 +19,7 @@ export const colors = {
 
 export const Body = styled.div`
     background-color: ${colors.red};
-    background-image: url('../images/bg-intro-desktop.png');
+    background-image: url('./../images/bg-intro-desktop.png');
     height: 100vh;
     width: 100vw;    
     color: white;
