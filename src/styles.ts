@@ -34,6 +34,10 @@ min-height: 100vh;
 align-items: center;
 justify-content: center;
 
+@media (max-width: 768px) {
+    flex-direction: column;
+}
+
 > div {
     flex: 1;
     display: flex;
@@ -45,11 +49,23 @@ justify-content: center;
     margin: 0 20px;
     gap: 1.5rem;
 
+    @media (max-width: 768px) {
+        margin: 0;
+        text-align: center;
+    }
+
     h1 {
         font-size: 2.5rem;
         font-weight: 700;
         align-self: flex-start; 
+
+        @media (max-width: 768px) {
+            font-size: 2rem;
+            align-self: center;
     }
+
+  
+}
     
 }
 `;

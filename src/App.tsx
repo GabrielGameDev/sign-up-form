@@ -60,26 +60,26 @@ function App() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    const isValid = [firstName, lastName, email, password].every(
+      (item) => item.inputValue !== ""
+    );
+
     if (firstName.inputValue === "") {
       setFirstName({ inputValue: firstName.inputValue, error: true });
-      return;
     }
 
     if (lastName.inputValue === "") {
       setLastName({ inputValue: lastName.inputValue, error: true });
-      return;
     }
 
     if (email.inputValue === "") {
       setEmail({ inputValue: email.inputValue, error: true });
-      return;
     }
 
     if (password.inputValue === "") {
       setPassword({ inputValue: password.inputValue, error: true });
-      return;
     }
-
+    if (!isValid) return;
     alert("Form sent successfully!");
     window.location.reload();
   };
